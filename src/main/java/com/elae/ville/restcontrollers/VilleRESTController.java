@@ -25,8 +25,8 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class VilleRESTController {
 	
-	//@Autowired
-	private final VilleService villeService;
+	@Autowired
+	VilleService villeService;
 	
 	
 	
@@ -42,14 +42,14 @@ public class VilleRESTController {
 	 }
 	
 	//@RequestMapping(method = RequestMethod.POST)
-	@PostMapping
-	public Ville createProduit(@RequestBody Ville ville) {
+	@PostMapping()
+	public Ville createVille(@RequestBody Ville ville) {
 	  return villeService.saveVille(ville);
 	}
 	
 	//@RequestMapping(method = RequestMethod.PUT)
-	@PutMapping
-	public Ville updateProduit(@RequestBody Ville ville) {
+	@PutMapping()
+	public Ville updateVille(@RequestBody Ville ville) {
 	   return villeService.updateVille(ville);
 	}
 	

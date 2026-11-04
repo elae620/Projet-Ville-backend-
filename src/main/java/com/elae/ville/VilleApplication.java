@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
 import com.elae.ville.entities.Ville;
+import com.elae.ville.entities.Pays;
 
 @SpringBootApplication
 public class VilleApplication implements CommandLineRunner {
@@ -21,7 +22,7 @@ public class VilleApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-	  repositoryRestConfiguration.exposeIdsFor(Ville.class);
+	  repositoryRestConfiguration.exposeIdsFor(Ville.class, Pays.class);
 	}
 
 }

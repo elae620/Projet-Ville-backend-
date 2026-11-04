@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import lombok.NoArgsConstructor;
 
 @Entity
 public class Pays {
@@ -25,6 +26,10 @@ public class Pays {
     
    
 
+	public Pays() {
+		super();
+	}
+
 	public Pays(Long idPays, String nomPays, String description, List<Ville> villes) {
 		super();
 		this.idPays = idPays;
@@ -40,9 +45,7 @@ public class Pays {
 		this.villes = villes;
 	}
     
-	public Pays() {
-		super();
-	}
+
 
 	public Long getIdPays() {
 		return idPays;

@@ -25,6 +25,9 @@ public class Ville {
 	private Pays pays;
 	
 	
+
+
+
 	public Ville(Long idVille, String nomVille, Double superficie, Date dateCreation) {
 		super();
 		this.idVille = idVille;
